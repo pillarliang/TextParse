@@ -10,11 +10,18 @@ lmdb
 tqdm
 numpy
 rapidfuzz
-opencv-python<=4.6.0.66
-opencv-contrib-python<=4.6.0.66
+# # opencv-python<=4.6.0.66
+opencv-python-headless<=4.6.0.66
+# opencv-contrib-python<=4.6.0.66
 cython
 Pillow>=10.0.0
 pyyaml
 requests
 pymupdf
 premailer
+python-docx
+python-docx
+beautifulsoup4
+fonttools>=4.24.0
+fire>=0.3.0
+openpyxl

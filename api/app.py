@@ -1,8 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import uvicorn
 from fastapi.staticfiles import StaticFiles
-import uvicorn
 from pathlib import Path
 import os
 from routers import files
@@ -29,4 +27,5 @@ async def root():
 
 
 if __name__ == "__main__":
-    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
+    import uvicorn
+    uvicorn.run("app:app", host="0.0.0.0", port=8000)

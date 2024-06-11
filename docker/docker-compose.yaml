@@ -1,0 +1,21 @@
+version: '0.1'
+
+services:
+  web:
+    build:
+      context: ../web
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3000"
+
+  api:
+    build:
+      context: ../api
+      dockerfile: Dockerfile
+    ports:
+      - "8006:8006"
+    volumes:
+      - ../api:/workspace/api
+    environment:
+      HF_ENDPOINT: "https://hf-mirror.com"
+      HUGGING_FACE_HUB_TOKEN: "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"

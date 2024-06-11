@@ -41,7 +41,7 @@ async def upload_files_and_parse(file: UploadFile = File(...)):
             status_code=500, content={"message": "Could not save file."}
         )
 
-    file_url = f"http://127.0.0.1:8000/files/static/{safe_filename}"
+    file_url = f"http://10.10.11.2:8006/files/static/{safe_filename}" #TODO: fix hard code
     return {
         "filename": file.filename,
         "uuid_filename": safe_filename,

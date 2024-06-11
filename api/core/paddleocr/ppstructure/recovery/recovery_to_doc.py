@@ -78,7 +78,7 @@ def convert_info_markdown(layout_boxes, save_folder, img_floader):
             )
             print("img_floader", img_floader)
             encoded_file_name = urllib.parse.quote(img_path)
-            img_path = f"http://127.0.0.1:8000/files/static/{encoded_file_name}"
+            img_path = f"http://10.10.11.2:8006/files/static/{encoded_file_name}" # TODO: ❌hard code
 
             if not os.path.exists(img_path):
                 print(f"The file {img_path} does not exists.")

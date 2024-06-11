@@ -5,6 +5,7 @@ import { UploadOutlined } from '@ant-design/icons';
 import { message, Upload, Button } from 'antd';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
+import { FILE_EXPORT } from '../constants/constant';
 
 
 export default function UploadFile() {
@@ -17,7 +18,7 @@ export default function UploadFile() {
     formData.append('file', file);
   
     try {
-      const response = await axios.post('http://127.0.0.1:8000/files/upload', formData, {
+      const response = await axios.post(FILE_EXPORT, formData, {
         onUploadProgress: ({ total, loaded }) => {
           onProgress({ percent: Math.round((loaded / total!) * 100).toFixed(2) }, file);
         },

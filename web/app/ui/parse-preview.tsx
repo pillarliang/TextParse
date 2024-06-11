@@ -21,7 +21,7 @@ export default function NotePreview({ children }: any) {
     <div className="note-preview text-with-markdown">
       <div
         dangerouslySetInnerHTML={{
-          __html: sanitizeHtml(marked(children || ''), {
+          __html: sanitizeHtml(String(marked(children || '')), {
             allowedTags,
             allowedAttributes
           })
